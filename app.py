@@ -1,4 +1,16 @@
-from __future__ import annotations
+from flask import Response
+
+@app.route("/twiml")
+def twiml():
+    twiml_response = """
+    <Response>
+        <Pause length="3"/>
+        <Play digits="633#"/>
+    </Response>
+    """
+    return Response(twiml_response, mimetype="text/xml")
+from __future__ 
+import annotations
 
 import collections.abc as cabc
 import os
